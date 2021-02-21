@@ -1,0 +1,87 @@
+[
+  {
+    "id": 0,
+    "type": "script",
+    "name": "Touchbar",
+    "script_id": 4,
+    "global_feedback": "default",
+    "global_feedback_active": "True",
+    "global_LED_on": "127",
+    "global_LED_off": "0",
+    "script_attach_id": "3",
+    "file_name": "4_script.json",
+    "LED_mapping_type_needs_feedback": false,
+    "python_version": "3",
+    "has_child": -1
+  },
+  {
+    "level": 0,
+    "has_child": -1,
+    "id": 1,
+    "type": {
+      "id": 0,
+      "type": "Mode",
+      "parent": null,
+      "has_child": -1,
+      "level": 0,
+      "icon": "fa-layer-group"
+    },
+    "parent_id": 0,
+    "name": "Mode 1",
+    "LED_feedback": "custom",
+    "LED_mapping_type_needs_feedback": false,
+    "LED_feedback_active": false,
+    "LED_on": 127,
+    "LED_off": 0,
+    "LED_send_feedback_to_selected": []
+  },
+  {
+    "level": 1,
+    "has_child": -1,
+    "id": 2,
+    "type": {
+      "id": 25,
+      "type": "Track",
+      "parent": 0,
+      "has_child": -1,
+      "level": 1,
+      "icon": "fa-columns"
+    },
+    "parent_id": 1,
+    "name": "Selected Track",
+    "track_type": "selected",
+    "track_include_folded": true,
+    "track_number": 1,
+    "track_relative_to_session": true,
+    "LED_feedback": "custom",
+    "LED_mapping_type_needs_feedback": false,
+    "LED_feedback_active": false,
+    "LED_on": 127,
+    "LED_off": 0,
+    "LED_send_feedback_to_selected": []
+  },
+  {
+    "level": 2,
+    "has_child": -1,
+    "id": 3,
+    "type": {
+      "id": 35,
+      "type": "Device",
+      "parent": 25,
+      "has_child": -1,
+      "level": 2,
+      "icon": "fa-window-maximize"
+    },
+    "parent_id": 2,
+    "name": "Device 1",
+    "device_selector": "number",
+    "device_selector_input": 1,
+    "device_selector_chain_targeting": [],
+    "LED_feedback": "custom",
+    "LED_mapping_type_needs_feedback": false,
+    "LED_feedback_active": false,
+    "LED_on": 127,
+    "LED_off": 0,
+    "LED_send_feedback_to_selected": []
+  }
+]
