@@ -51,8 +51,9 @@ class custom_control_script(ControlSurface):
 			self.log_message(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
 			self.log_message(":::::: MIDI MAPPINGS ::::::::::::::::::::::::::::::::::::::::::")
 			self.log_message(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+			for mapped_device_name in midi_mappings:
+				self.log_message(str(mapped_device_name) + " mapped!")
 			
-
 			# mappable_parameters = []
 			# for index, parameter in enumerate(selected_device_parameters, start=1):
 			# 	mappable_parameter = {
@@ -70,9 +71,9 @@ class custom_control_script(ControlSurface):
 	def load_midi_mappings_from_files(self):
 		midi_maps = {}
 
-		for filename in os.listdir(self.config_directory_path)
+		for filename in os.listdir(self.config_directory_path):
 			device_name = os.path.splitext(filename)
-			midi_maps[device_name] = json.loads(open(filename))
+			midi_maps[device_name] = json.loads(open(self.config_directory_path + filename).read())
 
 		return midi_maps
 
